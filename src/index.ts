@@ -9,6 +9,11 @@ const port = process.env.PORT || 3000;
 
 app.use("/api/v1", routes);
 
+app.all("*", (_, res, next) => {
+  res.set("Access-Control-Allow-Origin", "*");
+  next();
+});
+
 app.listen(port, () => {
   console.log(`[server]: Server running on port ${port}`);
 });
