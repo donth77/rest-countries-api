@@ -26,6 +26,7 @@ region.get("/:region", (req, res) => {
       return;
     }
 
+    console.info(`Success - ${req.originalUrl}, host - ${req.headers.host}`);
     res.status(200).send(countries);
   } catch (err) {
     const errorMsg = "Failed to find countries";

@@ -30,6 +30,8 @@ name.get("/:name", (req, res) => {
       return;
     }
 
+    console.info(`Success - ${req.originalUrl}, host - ${req.headers.host}`);
+    console.log(req.headers);
     res.status(200).send(country);
   } catch (err) {
     const errorMsg = "Failed to find country";

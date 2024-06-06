@@ -39,6 +39,7 @@ alpha.get("/:code", (req, res) => {
       return;
     }
 
+    console.info(`Success - ${req.originalUrl}, host - ${req.headers.host}`);
     res.status(200).send(country);
   } catch (err) {
     const errorMsg = "Failed to find country";
