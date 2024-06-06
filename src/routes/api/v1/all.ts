@@ -2,7 +2,7 @@ import express from "express";
 import { Country } from "../../../types";
 
 const all = express.Router();
-const data: Country[] = require("../../../data.json");
+const data: Country[] = require("../../../../data.json");
 
 all.get("/", (_, res) => {
   try {

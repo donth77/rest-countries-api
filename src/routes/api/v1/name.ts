@@ -2,7 +2,7 @@ import express from "express";
 import { Country } from "../../../types";
 
 const name = express.Router();
-const data: Country[] = require("../../../data.json");
+const data: Country[] = require("../../../../data.json");
 
 function findCountryWithName(name: string) {
   const alphaLower = name.toLocaleLowerCase();

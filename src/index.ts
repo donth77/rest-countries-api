@@ -10,5 +10,5 @@ const port = process.env.PORT || 3000;
 app.use("/api/v1", routes);
 
 app.listen(port, () => {
-  console.log(`[server]: Server running on port {port}`);
+  console.log(`[server]: Server running on port ${port}`);
 });

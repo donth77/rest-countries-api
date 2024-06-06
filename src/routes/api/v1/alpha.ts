@@ -2,7 +2,7 @@ import express from "express";
 import { Country } from "../../../types";
 
 const alpha = express.Router();
-const data: Country[] = require("../../../data.json");
+const data: Country[] = require("../../../../data.json");
 
 function findCountryWithCode(alpha: string) {
   const alphaUpper = alpha.toUpperCase();

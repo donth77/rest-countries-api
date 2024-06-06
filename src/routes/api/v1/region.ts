@@ -2,7 +2,7 @@ import express from "express";
 import { Country } from "../../../types";
 
 const region = express.Router();
-const data: Country[] = require("../../../data.json");
+const data: Country[] = require("../../../../data.json");
 
 function findCountriesWithRegion(region: string) {
   const regionLower = region.toLowerCase();
